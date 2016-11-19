@@ -9,3 +9,7 @@ Use the header `X-AppEngine-Country`
 
 ## Akamai - ion
 Use the edgescape header `X-Akamai-Edgescape`, look for `country_code` in the string.
+
+## Edgecast - WURL
+
+Add `%{geo_country}` to a header using the advanced rules engine.

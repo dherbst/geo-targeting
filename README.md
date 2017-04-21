@@ -4,6 +4,14 @@ Many content distribution networks give you tools to target your content based o
 ## AWS - Cloudfront
 Use the header `CloudFront-Viewer-Country`
 
+### Get the country from cloudfront using django
+
+```
+def my_view(request):
+    country = request.META.get('HTTP_CLOUDFRONT_VIEWER_COUNTRY', None)
+```
+
+
 ## Google - AppEngine
 Use the header `X-AppEngine-Country`
 

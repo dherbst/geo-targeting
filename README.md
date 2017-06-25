@@ -11,6 +11,24 @@ def my_view(request):
     country = request.META.get('HTTP_CLOUDFRONT_VIEWER_COUNTRY', None)
 ```
 
+### Country from cloudfront using golang and context
+
+```
+import (
+       "context"
+       "fmt"
+       "github.com/dherbst/geo-targeting/src/geo"
+       "net/http"
+)
+
+func init() {
+	http.HandleFunc("/country", func(w http.ResponseWriter, r *http.Request) {
+		ctx := geo.WithCountry(context.Background(), r)
+		country, _ := geo.CountryFromContext(ctx)
+		fmt.Fprintf(w, "Country=%v\n", country)
+	})
+}
+```
 
 ## Google - AppEngine
 Use the header `X-AppEngine-Country`

@@ -1,3 +1,5 @@
+[![Go Report Card](https://goreportcard.com/badge/github.com/dherbst/geo-targeting?style=flat-square)](https://goreportcard.com/report/github.com/dherbst/geo-targeting)
+
 # Geo-Targeting using CDNs
 Many content distribution networks give you tools to target your content based on the country the user is in when they make a request to your web application.   Here are some examples:
 

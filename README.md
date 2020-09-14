@@ -41,3 +41,8 @@ Use the edgescape header `X-Akamai-Edgescape`, look for `country_code` in the st
 ## Edgecast - WURL
 
 Add `%{geo_country}` to a header using the advanced rules engine.
+
+## Cloudflare
+Use the header `CF-IPCountry`.
+
+[Documentation](https://support.cloudflare.com/hc/en-us/articles/200168236-Configuring-Cloudflare-IP-Geolocation)
